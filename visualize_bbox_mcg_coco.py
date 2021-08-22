@@ -4,9 +4,9 @@ import cv2
 import numpy as np
 import pdb
 from random import randint
-#img_name = 'COCO_train2014_000000365817'
+img_name = 'COCO_train2014_000000365817'
 #img_name = 'COCO_train2014_000000467063'
-img_name = 'COCO_train2014_000000458025'
+#img_name = 'COCO_train2014_000000458025'
 rgb_ima = '/research/dept2/qxlai/DataSets/MS_COCO/train2014/'+img_name+'.jpg' #'i1000274881.jpeg'
 box_path = '/research/dept2/qxlai/DataSets/MS_COCO/MCG_boxes/MCG-COCO-train2014-boxes/'+img_name+'.mat'
 
