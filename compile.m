@@ -89,7 +89,8 @@ try
 	addpath(genpath([pwd '/mcg/MCG-pre-trained']));
 	%set root_dir for mcg
 	mcgRootDir = mcg_path;
-        boostPath='/opt/local/include/';
+        % boostPath='/opt/local/include/';
+	boostPath='/usr/local/boost/include/';
 	%build and install
 	mcg_build(parDir, mcgRootDir, boostPath);
 	%mcg_install(mcgRootDir);
@@ -259,7 +260,8 @@ end
    else
        % if unix/linux
        fprintf('linux var set for rigor \n');
-       boost_libs = '/usr/local/lib';
+       % boost_libs = '/usr/local/lib';
+       boost_libs = '/usr/local/boost/lib'
        boost_lib_opt = ['-L', boost_libs];
        extra_opts = '-lrt';
    end
@@ -318,41 +320,41 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Building Geodesic Object Proposals
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-try
-    fprintf('Compilation of Geodesic Object Proposals started\n ');
-    gopPath = [pwd, '/gop_1.3/matlab'];
-    addpath(genpath(gopPath));
-    cd(gopPath);
-    compile();
+%try
+%    fprintf('Compilation of Geodesic Object Proposals started\n ');
+%    gopPath = [pwd, '/gop_1.3/matlab'];
+%    addpath(genpath(gopPath));
+%    cd(gopPath);
+%    compile();
     %%system(sprintf('cp %s/gop_mex.mexa64.compiled %s/gop_mex.mexa64',pwd,pwd));
-    cd(parDir);
-    fprintf('Compilation of Geodesic Object Proposals  successfully finished\n ');
-    fprintf('***************************\n');
-catch exc
-    fprintf('Compilation of Geodesic Object Proposals failed\n ');
-    fprintf(exc.message);
-    fprintf('***************************\n');
-    cd(parDir);
-end
+%    cd(parDir);
+%    fprintf('Compilation of Geodesic Object Proposals  successfully finished\n ');
+%    fprintf('***************************\n');
+%catch exc
+%    fprintf('Compilation of Geodesic Object Proposals failed\n ');
+%    fprintf(exc.message);
+%    fprintf('***************************\n');
+%    cd(parDir);
+%end
 
 %%%%%%%%%%%%%%%%%%
 %% Building LPO %%
 %%%%%%%%%%%%%%%%%%
-try
-    fprintf('Compilation of LPO started\n ');
-    lpoPath = [pwd, '/lpo/matlab'];
-    addpath(genpath(lpoPath));
-    cd(lpoPath);
-    compile();
+%try
+%    fprintf('Compilation of LPO started\n ');
+%    lpoPath = [pwd, '/lpo/matlab'];
+%    addpath(genpath(lpoPath));
+%    cd(lpoPath);
+%    compile();
     %%system(sprintf('cp %s/gop_mex.mexa64.compiled %s/gop_mex.mexa64',pwd,pwd));
-    cd(parDir);
-    fprintf('Compilation of LPO  successfully finished\n ');
-    fprintf('***************************\n');
-catch exc
-    fprintf('Compilation of LPO failed\n ');
-    fprintf(exc.message);
-    fprintf('***************************\n');
-    cd(parDir);
-end
+%    cd(parDir);
+%    fprintf('Compilation of LPO  successfully finished\n ');
+%    fprintf('***************************\n');
+%catch exc
+%    fprintf('Compilation of LPO failed\n ');
+%    fprintf(exc.message);
+%    fprintf('***************************\n');
+%    cd(parDir);
+%end
 
   fprintf('******Compiling complete.*********\n')
