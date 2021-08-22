@@ -134,43 +134,43 @@ configjson.selective_search.params.simFunctionHandles = {@SSSimColourTextureSize
 %% configuring Geodesic Object Proposal %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-gopPath = [pwd, '/gop_1.3'];
-addpath(genpath(gopPath));
-configjson.gop.gopdatapath=[gopPath '/data'];
+%gopPath = [pwd, '/gop_1.3'];
+%addpath(genpath(gopPath));
+%configjson.gop.gopdatapath=[gopPath '/data'];
 
 
-    proposalNames = fieldnames(configjson);
-    for i = 1:length(proposalNames)
-        if((strcmp(proposalNames(i), 'imageLocation')==1 || strcmp(proposalNames(i), 'outputLocation')==1 || strcmp(proposalNames(i), 'params')==1))
-            continue;
-        else
-            eval(sprintf('configjson.%s.opts.outputLocation = fullfile(configjson.outputLocation,proposalNames(i));',char(proposalNames(i))))
-            eval(sprintf('configjson.%s.opts.name = proposalNames(i);',  char(proposalNames(i)) ))
-            eval(sprintf('configjson.%s.opts.color = (randi(256,1,3)-1)/256;',  char(proposalNames(i))  ))
+%    proposalNames = fieldnames(configjson);
+%    for i = 1:length(proposalNames)
+%        if((strcmp(proposalNames(i), 'imageLocation')==1 || strcmp(proposalNames(i), 'outputLocation')==1 || strcmp(proposalNames(i), 'params')==1))
+%            continue;
+%        else
+%            eval(sprintf('configjson.%s.opts.outputLocation = fullfile(configjson.outputLocation,proposalNames(i));',char(proposalNames(i))))
+%            eval(sprintf('configjson.%s.opts.name = proposalNames(i);',  char(proposalNames(i)) ))
+%            eval(sprintf('configjson.%s.opts.color = (randi(256,1,3)-1)/256;',  char(proposalNames(i))  ))
 
-        end
-    end
+%        end
+%    end
 
 %%%%%%%%%%%%%%%%%%%%%
 %% configuring LPO %%
 %%%%%%%%%%%%%%%%%%%%%
 
-lpoPath = [pwd, '/lpo'];
-addpath(genpath(lpoPath));
-configjson.lpo.path=lpoPath;
+%lpoPath = [pwd, '/lpo'];
+%addpath(genpath(lpoPath));
+%configjson.lpo.path=lpoPath;
 
 
-    proposalNames = fieldnames(configjson);
-    for i = 1:length(proposalNames)
-        if((strcmp(proposalNames(i), 'imageLocation')==1 || strcmp(proposalNames(i), 'outputLocation')==1 || strcmp(proposalNames(i), 'params')==1))
-            continue;
-        else
-            eval(sprintf('configjson.%s.opts.outputLocation = fullfile(configjson.outputLocation,proposalNames(i));',char(proposalNames(i))))
-            eval(sprintf('configjson.%s.opts.name = proposalNames(i);',  char(proposalNames(i)) ))
-            eval(sprintf('configjson.%s.opts.color = (randi(256,1,3)-1)/256;',  char(proposalNames(i))  ))
+%    proposalNames = fieldnames(configjson);
+%    for i = 1:length(proposalNames)
+%        if((strcmp(proposalNames(i), 'imageLocation')==1 || strcmp(proposalNames(i), 'outputLocation')==1 || strcmp(proposalNames(i), 'params')==1))
+%            continue;
+%        else
+%            eval(sprintf('configjson.%s.opts.outputLocation = fullfile(configjson.outputLocation,proposalNames(i));',char(proposalNames(i))))
+%            eval(sprintf('configjson.%s.opts.name = proposalNames(i);',  char(proposalNames(i)) ))
+%            eval(sprintf('configjson.%s.opts.color = (randi(256,1,3)-1)/256;',  char(proposalNames(i))  ))
 
-        end
-    end
+%        end
+%    end
 
 
 
