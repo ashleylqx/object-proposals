@@ -4,16 +4,16 @@ import cv2
 import numpy as np
 import pdb
 from random import randint
-#img_name = 'i2206349266.jpeg'
-img_name = 'i1000274881.jpeg'
+img_name = 'i2206349266.jpeg'
+#img_name = 'i1000274881.jpeg'
 rgb_ima = '/research/dept2/qxlai/DataSets/MIT1003/ALLSTIMULI/'+img_name #'i1000274881.jpeg'
 #box_path = '/research/dept2/qxlai/DataSets/MIT1003/randomPrim/'+img_name+'.mat'  #'i1000274881.jpeg.mat'
-#box_path = '/research/dept2/qxlai/DataSets/MIT1003/mcg/'+img_name+'.mat'
-box_path = '/research/dept2/qxlai/DataSets/MIT1003/objectness/'+img_name+'.mat'
+box_path = '/research/dept2/qxlai/DataSets/MIT1003/mcg/'+img_name+'.mat'
+#box_path = '/research/dept2/qxlai/DataSets/MIT1003/objectness/'+img_name+'.mat'
 
 #save_path = img_name.replace('.jpeg', '_rP_ds.jpeg')  #'i1000274881_rP.jpeg'
-#save_path = img_name.replace('.jpeg', '_mcg.jpeg')
-save_path = img_name.replace('.jpeg', '_obj.jpeg')
+save_path = img_name.replace('.jpeg', '_mcg.jpeg')
+#save_path = img_name.replace('.jpeg', '_obj.jpeg')
 color=(0,0,255)
 
 #image = scipy.misc.imread(rgb_ima, mode='RGB')
