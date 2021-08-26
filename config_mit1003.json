@@ -1,6 +1,6 @@
 {
-    "imageLocation": "/research/dept2/qxlai/DataSets/PASCAL-S/images/",
-    "outputLocation": "/research/dept2/qxlai/DataSets/PASCAL-S/",
+    "imageLocation": "/research/dept2/qxlai/DataSets/MIT1003/ALLSTIMULI/",
+    "outputLocation": "/research/dept2/qxlai/DataSets/MIT1003/",
 
     "edgeBoxes": {
         "opts": {
